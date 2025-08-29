@@ -26,7 +26,7 @@ export const initialState: CartState = {
     cart: initialCart()
 }
 
-export const max_item = 5;
+export const max_item = 15;
 const min_item = 1;
 
 

@@ -12,16 +12,16 @@ export default function processor() {
   }, [state.cart])
 
 
-// console.log(state.data)
+console.log(state.data)
 
   return (
     <>
 
       <main className="container-xl mt-5">
-        <h2 className="text-center">Nuestra Colección de procesadores</h2>
+        <h2 className="text-center">Nuestra Colección de storage</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-4">
-          {state.data.cpu.map((guitar) => (
+          {state.data.storage.map((guitar) => (
             <Guitar
               key={guitar.id}
               guitar={guitar}

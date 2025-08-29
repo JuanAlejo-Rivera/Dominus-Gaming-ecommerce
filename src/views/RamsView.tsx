@@ -5,14 +5,14 @@ import Guitar from "../components/Guitar"
 export default function processor() {
 
 
-  const [state, dispatch] = useReducer(cartReducer, initialState)
+  const [state] = useReducer(cartReducer, initialState)
 
   useEffect(() => {
     localStorage.setItem('cart', JSON.stringify(state.cart))
   }, [state.cart])
 
 
-console.log(state.data)
+// console.log(state.data)
 
   return (
     <>
@@ -20,12 +20,11 @@ console.log(state.data)
       <main className="container-xl mt-5">
         <h2 className="text-center">Nuestra Colección de Memorias Ram</h2>
 
-        <div className="grid grid-cols-3"> 
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-4">
           {state.data.ram.map((guitar) => (
             <Guitar
               key={guitar.id}
               guitar={guitar}
-              dispatch={dispatch}
               quantity={state.cart.find(item => item.id === guitar.id)?.quantity || 0}
               max_item={max_item}
             />

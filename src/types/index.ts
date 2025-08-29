@@ -13,6 +13,10 @@ export type CartItem = Product & {
 export type dbproducts = {
   cpu: Product[]
   ram: Product[]
+  gpu: Product[]
+  storage: Product[]
+  psu: Product[]
+  peripherals: Product[]
 }
 
 
