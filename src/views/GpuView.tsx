@@ -18,9 +18,9 @@ export default function processor() {
     <>
 
       <main className="container-xl mt-5">
-        <h2 className="text-center">Nuestra Colección de gpu</h2>
+        <h2 className="text-center text-4xl mb-5 font-bold">Nuestra Colección de gpu</h2>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-2 2xl:grid-cols-4">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 2xl:grid-cols-4">
           {state.data.gpu.map((guitar) => (
             <Guitar
               key={guitar.id}
@@ -34,14 +34,6 @@ export default function processor() {
 
         </div>
       </main>
-
-
-      <footer className="bg-dark mt-5 py-5">
-        <div className="container-xl">
-          <p className="text-white text-center fs-4 mt-4 m-md-0">GuitarLA - Todos los derechos Reservados</p>
-        </div>
-      </footer>
-
     </>
   )
 }

@@ -20,30 +20,32 @@ export default function Guitar({ guitar, quantity, max_item }: GuitarProps) {
   const { name, price, image, description } = guitar;
 
   return (
-    <div className="border p-3 m-5 rounded-2xl shadow-lg ">
-      <div className="col-8">
-        <h3 className="font-bold">{name}</h3>
-        <div className="flex flex-col md:flex-row">
+    <div className="bg-gradient-to-b from-blue-900 via-blue-800 to-blue-700 text-white border border-blue-600 p-5 m-5 rounded-2xl shadow-lg shadow-blue-900/40 min-h-[500px] flex flex-col justify-between transform transition duration-300 hover:scale-105 hover:shadow-blue-500/50">
+      {/* Contenido principal */}
+      <div>
+        <h3 className="font-bold text-xl text-blue-300 mb-2">{name}</h3>
+        <div className="flex flex-col md:flex-row justify-center">
           <img
-            className="img-fluid"
+            className="mx-auto max-h-48 object-contain drop-shadow-lg"
             src={`/img/${image}.png`}
             alt={`imagen ${name}`}
           />
         </div>
-        <p>{description}</p>
-        <p className="font-bold text-3xl text-blue-600 mt-4">${price}</p>
-
-        <button
-          onClick={() =>
-            dispatch({ type: "add-to-cart", payload: { item: guitar } })
-          }
-          type="button"
-          className="bg-blue-500 hover:bg-blue-600 mt-5 w-full p-3 font-semibold text-black text-lg rounded-lg shadow-md transition-colors"
-          disabled={quantity >= max_item}
-        >
-          Agregar al Carrito
-        </button>
+        <p className="mt-4 text-sm text-blue-100">{description}</p>
+        <p className="font-bold text-3xl text-white mt-6">${price}</p>
       </div>
+
+      {/* Botón al final */}
+      <button
+        onClick={() =>
+          dispatch({ type: "add-to-cart", payload: { item: guitar } })
+        }
+        type="button"
+        className="bg-blue-500 hover:bg-blue-600 mt-5 w-full p-3 font-semibold text-white text-lg rounded-lg shadow-md shadow-blue-900/50 transition-all hover:shadow-blue-400/70"
+        disabled={quantity >= max_item}
+      >
+        Agregar al Carrito
+      </button>
     </div>
   );
 }
