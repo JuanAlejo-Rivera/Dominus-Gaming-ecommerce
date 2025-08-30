@@ -22,6 +22,27 @@ export const db: dbproducts = {
             price: 299,
             image: "core5",
             description: "14 núcleos y 20 hilos con hasta 5.1 GHz, gran opción calidad/precio para gaming en 1080p y 1440p. Requiere GPU dedicada."
+        },
+        {
+            id: 19,
+            name: "AMD Ryzen 7 5800X3D",
+            price: 359,
+            image: "ryzen7",
+            description: "8 núcleos, 16 hilos y la innovadora 3D V-Cache. Rendimiento brutal en gaming, aún con DDR4 y AM4."
+        },
+        {
+            id: 20,
+            name: "Intel Core i7-12700K",
+            price: 379,
+            image: "core7",
+            description: "12 núcleos híbridos con arquitectura Alder Lake. Gran balance para juegos y multitarea."
+        },
+        {
+            id: 21,
+            name: "AMD Ryzen 5 7600X",
+            price: 249,
+            image: "ryzen5",
+            description: "6 núcleos y 12 hilos Zen 4. Una opción accesible para plataformas AM5 con DDR5."
         }
     ],
     ram: [
@@ -45,6 +66,27 @@ export const db: dbproducts = {
             price: 79,
             image: "fury",
             description: "Módulo DDR5 de 5200MHz con soporte para XMP 3.0. Accesible y confiable para actualizar a plataformas modernas."
+        },
+        {
+            id: 22,
+            name: "TeamGroup T-Force Delta RGB 32GB DDR5",
+            price: 169,
+            image: "delta",
+            description: "Kit DDR5 a 6400MHz con diseño gaming agresivo y RGB brillante."
+        },
+        {
+            id: 23,
+            name: "Crucial Ballistix 16GB DDR4",
+            price: 75,
+            image: "crucial",
+            description: "Memoria DDR4 de 3600MHz CL16, excelente relación calidad/precio."
+        },
+        {
+            id: 24,
+            name: "Patriot Viper Steel 64GB DDR4 (2x32GB)",
+            price: 289,
+            image: "viper",
+            description: "Memoria de alta capacidad para edición de video, multitarea intensiva y servidores caseros."
         }
     ],
     gpu: [
@@ -68,6 +110,27 @@ export const db: dbproducts = {
             price: 349,
             image: "3060",
             description: "Con 8GB GDDR6, es ideal para gaming en 1080p y 1440p. Ofrece gran relación calidad/precio y soporte para DLSS y Ray Tracing."
+        },
+        {
+            id: 25,
+            name: "NVIDIA GeForce RTX 4090",
+            price: 1599,
+            image: "4090",
+            description: "Lo más potente para 4K y 3D rendering. 24GB GDDR6X con DLSS 3 y Ray Tracing de última generación."
+        },
+        {
+            id: 26,
+            name: "AMD Radeon RX 6800 XT",
+            price: 529,
+            image: "amd6800",
+            description: "16GB GDDR6, gran rendimiento en 1440p y 4K, excelente opción frente a la RTX 3080."
+        },
+        {
+            id: 27,
+            name: "Intel Arc A770 16GB",
+            price: 339,
+            image: "intelarc",
+            description: "GPU de Intel con 16GB GDDR6, soporte para Ray Tracing y AV1. Alternativa novedosa en la gama media."
         }
     ],
     storage: [
@@ -91,6 +154,27 @@ export const db: dbproducts = {
             price: 49,
             image: "barracuda",
             description: "HDD de 7200 RPM y 256MB caché, económico y confiable para almacenamiento masivo de juegos y archivos."
+        },
+        {
+            id: 28,
+            name: "Crucial P5 Plus 1TB NVMe",
+            price: 99,
+            image: "memocrucial",
+            description: "SSD Gen4 con velocidades de hasta 6600 MB/s, excelente para gaming rápido."
+        },
+        {
+            id: 29,
+            name: "Kingston A2000 500GB NVMe",
+            price: 49,
+            image: "kingston",
+            description: "SSD accesible con rendimiento confiable para builds de bajo presupuesto."
+        },
+        {
+            id: 30,
+            name: "Toshiba X300 4TB HDD",
+            price: 119,
+            image: "toshiba",
+            description: "Disco duro de alto rendimiento para almacenamiento masivo de juegos y multimedia."
         }
     ],
     psu: [
@@ -114,6 +198,27 @@ export const db: dbproducts = {
             price: 249,
             image: "seasonic",
             description: "Fuente premium con componentes japoneses y certificación Gold. Ultra eficiente y muy silenciosa."
+        },
+        {
+            id: 31,
+            name: "Cooler Master V850 SFX Gold",
+            price: 159,
+            image: "cooler",
+            description: "Fuente compacta SFX para gabinetes pequeños, eficiente y silenciosa."
+        },
+        {
+            id: 32,
+            name: "Thermaltake Toughpower GF1 750W",
+            price: 109,
+            image: "toughpower",
+            description: "Fuente modular con certificación Gold y componentes de alta durabilidad."
+        },
+        {
+            id: 33,
+            name: "Be Quiet! Straight Power 11 1000W",
+            price: 289,
+            image: "quiet",
+            description: "Fuente ultra silenciosa de 1000W, ideal para equipos con GPU de gama alta."
         }
     ],
     peripherals: [
@@ -137,6 +242,27 @@ export const db: dbproducts = {
             price: 129,
             image: "headset_01",
             description: "Auriculares inalámbricos con sonido 7.1 virtual y micrófono con cancelación de ruido. Hasta 30 horas de batería."
+        },
+        {
+            id: 34,
+            name: "Razer DeathAdder V3 Pro",
+            price: 149,
+            image: "razer",
+            description: "Mouse ergonómico inalámbrico con sensor Focus Pro 30K. Ligero y preciso."
+        },
+        {
+            id: 35,
+            name: "ASUS ROG Claymore II",
+            price: 249,
+            image: "asus_keyboard",
+            description: "Teclado modular inalámbrico con switches ópticos y diseño premium."
+        },
+        {
+            id: 36,
+            name: "Logitech G733 Lightspeed",
+            price: 159,
+            image: "g733",
+            description: "Headset inalámbrico con RGB, micrófono desmontable y hasta 29 horas de batería."
         }
     ]
 };

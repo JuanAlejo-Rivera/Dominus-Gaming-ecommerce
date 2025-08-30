@@ -26,7 +26,7 @@ export default function Guitar({ guitar, quantity, max_item }: GuitarProps) {
         <h3 className="font-bold text-xl text-blue-300 mb-2">{name}</h3>
         <div className="flex flex-col md:flex-row justify-center">
           <img
-            className="mx-auto max-h-48 object-contain drop-shadow-lg"
+            className="mx-auto max-h-48 object-contain hover:scale-105 transition-transform"
             src={`/img/${image}.png`}
             alt={`imagen ${name}`}
           />

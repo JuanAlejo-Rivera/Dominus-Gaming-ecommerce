@@ -12,7 +12,7 @@ export default function processor() {
   }, [state.cart])
 
 
-  // console.log(state.data)
+  console.log(state.data)
 
   return (
     <>

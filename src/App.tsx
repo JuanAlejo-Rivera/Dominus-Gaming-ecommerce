@@ -33,7 +33,7 @@ function App() {
               guitar={guitar}
               dispatch={dispatch}
               quantity={state.cart.find(item => item.id === guitar.id)?.quantity || 0}
-              max_item={max_item}
+              max_item={max_items}
             />
           ))}
 

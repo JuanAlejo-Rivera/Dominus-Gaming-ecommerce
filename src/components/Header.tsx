@@ -38,7 +38,7 @@ export function Header({ cart, dispatch }: HeaderProps) {
 
 
     return (
-        <header className={'bg-[url(/img/bg.png)] bg-cover p-4'}>
+        <header className={'bg-[url(/img/bg.png)] bg-cover p-4 '}>
             <div className="flex flex-col md:flex-row justify-between items-center">
                 <div className="flex justify-center">
                     <div className="flex justify-center md:justify-start w-full sm: md:w-auto">
