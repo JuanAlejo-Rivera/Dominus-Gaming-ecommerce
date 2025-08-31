@@ -15,7 +15,7 @@ export default function CartContent({ isEmpty, cart, cartTotal, dispatch }: cart
     return (
         <>
             {isEmpty ? (
-                <p className="p-2">El carrito esta vacio</p>
+                <p className="p-2">El carrito esta vacío</p>
             ) : (
                 <>
                     <QuantityRegulator cart={cart} dispatch={dispatch} />
