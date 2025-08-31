@@ -2,7 +2,6 @@ import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Processor from "./views/ProcessorsView";
 import RamsView from "./views/RamsView";
 import AppLayout from "./layouts/AppLayout";
-import DashboardView from "./views/DashboardView";
 import GpuView from "./views/GpuView";
 import PsuView from "./views/PsuView";
 import StorageView from "./views/StorageView";
