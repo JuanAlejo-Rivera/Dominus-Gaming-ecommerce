@@ -13,7 +13,7 @@ type QuantityRegulatorProps = {
 export default function QuantityRegulator({ cart, dispatch }: QuantityRegulatorProps) {
 
   return (
-    <div className="max-h-[300px] overflow-x-hidden">
+    <div className="max-h-[300px] overflow-x-auto">
       <table className="w-113 table">
         <thead className="border-b border-gray-600">
           <tr>

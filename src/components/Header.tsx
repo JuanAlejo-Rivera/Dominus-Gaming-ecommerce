@@ -13,6 +13,7 @@ type HeaderProps = {
 export function Header({ cart, dispatch }: HeaderProps) {
 
     const [isOpen, setIsOpen] = useState(false)
+    const [menuOpen, setMenuOpen] = useState(false)
     const cartRef = useRef<HTMLDivElement | null>(null)
 
     // cerrar carrito al hacer click fuera
@@ -45,7 +46,16 @@ export function Header({ cart, dispatch }: HeaderProps) {
                         <img className="w-56 max-w-full" src="img/GameCoreLogo.png" alt="imagen logo" />
                     </div>
                 </div>
-                <nav className="flex justify-end">
+
+                <button
+                    className="md:hidden p-2 text-white text-2xl"
+                    onClick={() => setMenuOpen(!menuOpen)}
+                >
+                    ☰
+                </button>
+
+
+                <nav className="hidden md:flex gap-4 items-center">
                     <Tabs /> {/* Componente de pestañas */}
                     <div
                         className="relative group"
@@ -57,7 +67,6 @@ export function Header({ cart, dispatch }: HeaderProps) {
                             className="max-h-7 cursor-pointer"
                             src="/img/carrito.png"
                             alt="imagen carrito"
-                            onClick={() => setIsOpen(!isOpen)}
                         />
 
                         {/* Contenedor del carrito */}
@@ -94,6 +103,32 @@ export function Header({ cart, dispatch }: HeaderProps) {
                     </div>
                 </nav>
             </div>
+
+
+            {/* Menu hamburguesa para movil */}
+            {menuOpen && (
+                <div className="md:hidden mt-4 bg-black/90 text-white p-4 rounded-lg shadow-lg animate-slideDown">
+                    <Tabs />
+
+                    <div className="mt-6 justify-center flex">
+                        <img
+                            className="max-h-7 cursor-pointer"
+                            src="/img/carrito.png"
+                            alt="imagen carrito"
+                            onClick={() => setIsOpen(!isOpen)}
+                        />
+                    </div>
+                </div>
+
+            )}
+
+            {isOpen && (
+                <div className="md:hidden mt-4 bg-white p-3 rounded-lg shadow-lg animate-slideDown overflow-x-hidden">
+                    <QuantityRegulator cart={cart} dispatch={dispatch} />
+                </div>
+            )}
+
+
         </header>
     )
 }
