@@ -13,8 +13,10 @@ export default function Router() {
             <Routes>
 
                 <Route element={<AppLayout />}>
-                    <Route path="/" element={<DashboardView />} />
-                    <Route path="/processor" element={<Processor />} />
+                    {/* <Route path="/" element={<DashboardView />} /> */}
+                    {/* <Route path="/processor" element={<Processor />} /> */}
+
+                    <Route path="/" element={<Processor />} />
                     <Route path="/rams" element={<RamsView />} />
                     <Route path="/gpu" element={<GpuView />} />
                     <Route path="/psu" element={<PsuView />} />

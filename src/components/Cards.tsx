@@ -5,19 +5,19 @@ import type { Dispatch } from 'react';
 
 type OutletContext = {
   dispatch: Dispatch<CartActions>;
-  cart: dbproducts['cpu'][0][];
+  cart: dbproducts['cpu'][0];
 };
 
-type GuitarProps = {
-  guitar: dbproducts['cpu'][0];
+type CardsProps = {
+  card: dbproducts['cpu'][0];
   quantity: number;
   max_item: number;
 };
 
-export default function Guitar({ guitar, quantity, max_item }: GuitarProps) {
+export default function Cards({ card, quantity, max_item }: CardsProps) {
   const { dispatch } = useOutletContext<OutletContext>();
 
-  const { name, price, image, description } = guitar;
+  const { name, price, image, description } = card;
 
   return (
     <div className="bg-gradient-to-b from-blue-900 via-blue-800 to-blue-700 text-white border border-blue-600 p-5 m-5 rounded-2xl shadow-lg shadow-blue-900/40 min-h-[500px] flex flex-col justify-between transform transition duration-300 hover:scale-105 hover:shadow-blue-500/50">
@@ -38,7 +38,7 @@ export default function Guitar({ guitar, quantity, max_item }: GuitarProps) {
       {/* Botón al final */}
       <button
         onClick={() =>
-          dispatch({ type: "add-to-cart", payload: { item: guitar } })
+          dispatch({ type: "add-to-cart", payload: { item: card } })
         }
         type="button"
         className="bg-blue-500 hover:bg-blue-600 mt-5 w-full p-3 font-semibold text-white text-lg rounded-lg shadow-md shadow-blue-900/50 transition-all hover:shadow-blue-400/70"

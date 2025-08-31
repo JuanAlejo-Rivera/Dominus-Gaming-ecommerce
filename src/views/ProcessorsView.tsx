@@ -1,6 +1,6 @@
 import { useEffect, useReducer } from "react"
 import { cartReducer, initialState, max_item } from "../reducers/cart-reducer"
-import Guitar from "../components/Guitar"
+import { ProducGrid } from "../components/ProducGrid"
 
 export default function processor() {
 
@@ -11,26 +11,12 @@ export default function processor() {
     localStorage.setItem('cart', JSON.stringify(state.cart))
   }, [state.cart])
 
-
-  console.log(state.data)
-
   return (
-    <>
-
-      <main className="mt-5">
-        <h2 className="text-center text-4xl mb-5 font-bold">Nuestra Colección de procesadores</h2>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-4">
-          {state.data.cpu.map((guitar) => (
-            <Guitar
-              key={guitar.id}
-              guitar={guitar}
-              quantity={state.cart.find(item => item.id === guitar.id)?.quantity || 0}
-              max_item={max_item}
-            />
-          ))}
-        </div>
-      </main>
-    </>
+    <ProducGrid
+      title="Nuestra Colección de Procesadores"
+      items={state.data.cpu}
+      max_item={max_item}
+      cart={state.cart}
+    />
   )
 }

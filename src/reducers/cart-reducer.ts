@@ -37,7 +37,7 @@ export const cartReducer = (
 
     if (action.type === "add-to-cart") {
 
-        const itemExist = state.cart.find((guitar) => guitar.id === action.payload.item.id)
+        const itemExist = state.cart.find((item) => item.id === action.payload.item.id)
 
         let updateCart: CartItem[] = []
         if (itemExist) {
