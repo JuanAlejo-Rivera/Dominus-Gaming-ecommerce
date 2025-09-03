@@ -14,7 +14,7 @@ export default function processor() {
   return (
     <ProducGrid
       title="Nuestra Colección de Discos Duros"
-      items={state.data.ram}
+      items={state.data.storage}
       max_item={max_item}
       cart={state.cart}
     />

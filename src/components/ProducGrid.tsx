@@ -14,7 +14,7 @@ export const ProducGrid = ({ items, max_item, title, cart }: ProductGridProps) =
   return (
     <>
       <main className="mt-5">
-        <h2 className="text-center text-4xl mb-5 font-bold">{title}</h2>
+        <h2 className="text-center text-gray-400 text-4xl mb-5 font-serif">{title}</h2>
 
         <div className="grid grid-cols-1 md:grid-cols-3 lg:grid-cols-3 2xl:grid-cols-4">
           {items.map((card) => (
