@@ -10,7 +10,7 @@ El proyecto simula una experiencia de compra real, con navegación por secciones
 
 ## ✨ Características principales
 
-- 🗂️ Navegación por secciones con diferentes categorías de productos (tabs).
+- 🗂️ Navegación por secciones con diferentes categorías de productos.
 - 🛒 Carrito desplegable al pasar el puntero:
   - Añadir productos.
   - Aumentar/disminuir cantidad.
